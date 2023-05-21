@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <style>
+        .clock-container
+        {
+           background-color: white;
+           
+
+            
+        }
+        .clock1
+        {
+            height: 360px;
+            width: 360px;
+            border-radius: 50%;
+            background-color: whitesmoke;
+            box-shadow: -2px -3px 10px rgb(61, 58, 58) , inset -3px -4px 12px rgb(61, 58, 58);
+            position:relative;
+            left:38%;
+
+        }
+        .clock2
+        {
+            height: 220px;
+            width: 220px;
+            border-radius: 50%;
+            background-color: whitesmoke;
+            box-shadow: -2px -3px 10px rgb(61, 58, 58) , inset -3px -4px 12px rgb(61, 58, 58);
+            position: relative;
+            left: 54%;
+        }
+        .q1{ 
+            position: absolute;
+            height: 100%;
+            width: 5px;
+            background-color:black;
+            left: 49%;
+        }
+
+        .q2{ 
+            position: absolute;
+            height: 100%;
+            width: 5px;
+            background-color: black;
+            transform: rotate(90deg);  
+            left: 49%; 
+             }
+
+             .w1
+             {
+                 position: absolute;
+                 height: 100%;
+                 width: 2.5px;
+                 background-color: rgb(59, 53, 53);
+                 transform: rotate(30deg);  
+                 left: 49.5%; 
+                
+             }
+
+             .w2
+             {
+                 position: absolute;
+                 height: 100%;
+                 width: 2.5px;
+                 background-color: rgb(59, 53, 53);
+                 transform: rotate(60deg);  
+                 left: 49.5%; 
+                
+             }
+
+             .w3
+             {
+                 position: absolute;
+                 height: 100%;
+                 width: 2.5px;
+                 background-color: rgb(59, 53, 53);
+                 transform: rotate(120deg);  
+                 left: 49.5%; 
+                
+             }
+
+             .w4
+             {
+                 position: absolute;
+                 height: 100%;
+                 width: 2.5px;
+                 background-color: rgb(59, 53, 53);
+                 transform: rotate(150deg);  
+                 left: 49.5%; 
+                
+             }
+             .innerclock
+             {
+                height: 78%;
+                width: 78%;
+                background-color: whitesmoke;
+                position: absolute;
+                border-radius: 50%;
+                top: 10%;
+                left: 10%;
+                
+             }
+
+             .dot
+             {
+                height: 5%;
+                width: 5%;
+                background-color: black;
+                position: absolute;
+                left: 47%;
+                top: 47%;
+                border-radius: 50%;
+             }
+
+             #hourhand
+             {
+                position: absolute;
+                height: 35%;
+                width: 5px;
+                background-color: black;
+                left: 49%;
+                bottom: 50%;
+                border-radius: 25px;
+                transform-origin: bottom;
+
+             }
+
+             #minhand
+             {
+                position: absolute;
+                height: 42%;
+                width: 4px;
+                background-color: black;
+                left: 49%;
+                border-radius: 22px;
+                bottom: 50%;
+                transform-origin: bottom;
+
+
+             }
+             .a1{ 
+            position: absolute;
+            height: 100%;
+            width: 3px;
+            background-color:black;
+            left: 49%;
+        }
+
+          .a2{ 
+            position: absolute;
+            height: 100%;
+            width: 3px;
+            background-color: black;
+            transform: rotate(90deg);  
+            left: 49%; 
+             }
+
+             .e1
+             {
+                 position: absolute;
+                 height: 100%;
+                 width: 2px;
+                 background-color: rgb(59, 53, 53);
+                 transform: rotate(30deg);  
+                 left: 49.5%; 
+                
+             }
+
+             .e2
+             {
+                 position: absolute;
+                 height: 100%;
+                 width: 2px;
+                 background-color: rgb(59, 53, 53);
+                 transform: rotate(60deg);  
+                 left: 49.5%; 
+                
+             }
+
+             .e3
+             {
+                 position: absolute;
+                 height: 100%;
+                 width: 2px;
+                 background-color: rgb(59, 53, 53);
+                 transform: rotate(120deg);  
+                 left: 49.5%; 
+                
+             }
+
+             .e4
+             {
+                 position: absolute;
+                 height: 100%;
+                 width: 2px;
+                 background-color: rgb(59, 53, 53);
+                 transform: rotate(150deg);  
+                 left: 49.5%; 
+                
+             }
+
+             .e5
+             {
+                 position: absolute;
+                 height: 100%;
+                 width: 1px;
+                 background-color: rgb(59, 53, 53);
+                 transform: rotate(15deg);  
+                 left: 49.5%; 
+                
+             }
+             .e6
+             {
+                 position: absolute;
+                 height: 100%;
+                 width: 1px;
+                 background-color: rgb(59, 53, 53);
+                 transform: rotate(45deg);  
+                 left: 49.5%; 
+                
+             }
+             .e7
+             {
+                 position: absolute;
+                 height: 100%;
+                 width: 1px;
+                 background-color: rgb(59, 53, 53);
+                 transform: rotate(75deg);  
+                 left: 49.5%; 
+                
+             }
+             .e8
+             {
+                 position: absolute;
+                 height: 100%;
+                 width: 1px;
+                 background-color: rgb(59, 53, 53);
+                 transform: rotate(105deg);  
+                 left: 49.5%; 
+                
+             }
+             .e9
+             {
+                 position: absolute;
+                 height: 100%;
+                 width: 1px;
+                 background-color: rgb(59, 53, 53);
+                 transform: rotate(135deg);  
+                 left: 49.5%; 
+                
+             }
+             .e10
+             {
+                 position: absolute;
+                 height: 100%;
+                 width: 1px;
+                 background-color: rgb(59, 53, 53);
+                 transform: rotate(165deg);  
+                 left: 49.5%; 
+                
+             }
+             .innerclock2
+             {
+                height: 78%;
+                width: 78%;
+                background-color: whitesmoke;
+                position: absolute;
+                border-radius: 50%;
+                top: 10%;
+                left: 10%;
+                
+             }
+
+             .dot2
+             {
+                height: 5%;
+                width: 5%;
+                background-color: black;
+                position: absolute;
+                left: 47%;
+                top: 47%;
+                border-radius: 50%;
+             }
+
+             #secondhand
+             {
+                position: absolute;
+                height: 38%;
+                width: 2.5px;
+                background-color: black;
+                left: 49%;
+                bottom: 50%;
+                border-radius: 25px;
+                transform-origin: bottom;
+             }
+
+             .t1
+             {
+                font-size: 42px;
+                color: black;
+                position: absolute;
+                top: 81%;
+                font-family:'Times New Roman', Times, serif;
+                left: 43%;
+                text-shadow: 2px 3px 6px rgb(43, 42, 42);
+             }
+
+
+    </style>
+
+    <script>
+        setInterval(() => 
+        {
+            d=new Date();
+            hour=d.getHours();
+            mins=d.getMinutes();
+            sec=d.getSeconds();
+
+            hrotation=30*hour+mins/2;
+            mrotation=6*mins;
+            srotation=6*sec;
+
+            hourhand.style.transform=`rotate(${hrotation}deg)`;
+            minhand.style.transform=`rotate(${mrotation}deg)`;
+            secondhand.style.transform=`rotate(${srotation}deg)`;
+
+        },1000)
+
+    </script>
+</head>
+<body>
+    
+    <div class="clock-container">
+
+        <div class="clock1">
+            <div class="q1"></div>
+            <div class="q2"></div>
+            <div class="w1"></div>
+            <div class="w2"></div>
+            <div class="w3"></div>
+            <div class="w4"></div>
+
+            <div class="innerclock"></div>
+            <div class="dot"></div>
+
+            <div id="hourhand"></div>
+            <div id="minhand"></div>
+
+        </div>
+
+        <div class="clock2">
+            <div class="a1"></div>
+            <div class="a2"></div>
+            <div class="e1"></div>
+            <div class="e2"></div>
+            <div class="e3"></div>
+            <div class="e4"></div>
+            <div class="e5"></div>
+            <div class="e6"></div>
+            <div class="e7"></div>
+            <div class="e8"></div>
+            <div class="e9"></div>
+            <div class="e10"></div>
+
+
+
+            <div class="innerclock2"></div>
+            <div class="dot2"></div>
+
+            <div id="secondhand"></div>
+        </div>
+
+        <h1 class="t1">Analog Clock</h1>
+    </div>
+</body>
+</html>

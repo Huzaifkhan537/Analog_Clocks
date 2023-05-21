@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+     html{
+        text-align: center;
+     }
+
+      body{
+        background-color: #242323;
+        margin:20px;
+        position: relative;
+      }
+
+      .clock{
+        height: 250px;
+        width: 250px;
+        border-radius: 50%;
+        border: 8px solid #1d1c1c;
+        box-shadow: -4px -4px 7px rgb(0, 0, 0),inset -4px -4px 10px rgba(5, 5, 5, 0.5);
+        position: relative;
+        left: 40%;
+
+
+      }
+
+      .bar1{
+        position: absolute;
+        width: 5px;
+        height: 100%;
+        background:rgb(247, 49, 125);
+        left: 49%;
+      }
+      .bar2{
+         position: absolute;
+         width: 5px;
+         height: 100%;
+         background:rgb(247, 49, 125);
+         left: 49%;
+         transform: rotate(90deg);
+      }
+
+      .sbar1{
+        position: absolute;
+         width: 2.3px;
+         height: 100%;
+         background: rgb(235, 147, 208);
+         left: 49%;
+         transform: rotate(30deg);
+      }
+
+      .sbar2{
+        position: absolute;
+         width: 2.3px;
+         height: 100%;
+         background: rgb(235, 147, 208);
+         left: 49%;
+         transform: rotate(60deg);
+      }
+
+      .sbar3{
+        position: absolute;
+         width: 2.3px;
+         height: 100%;
+         background: rgb(235, 147, 208);
+         left: 49%;
+         transform: rotate(120deg);
+      }
+
+      .sbar4{
+        position: absolute;
+         width: 2.3px;
+         height: 100%;
+         background: rgb(235, 147, 208);
+         left: 49%;
+         transform: rotate(150deg);
+      }
+
+      .innercircle{
+        width: 80%;
+        height: 80%;
+        border-radius: 100%;
+        background:#242323;
+        position: absolute;
+        top: 10%;
+        left: 10%;
+      }
+
+      .dot{
+        height: 10px;
+        width: 10px;
+        position: absolute;
+        top: 48%;
+        left: 48%;
+        border-radius: 100%;
+        background: rgb(235, 147, 208) ;
+      }
+
+      #sechand{
+        height: 47%;
+        width: 1.5px;
+        position: absolute;
+        background: rgb(207, 140, 178);
+        left: 50%;
+        bottom: 50%;
+        border-radius: 34%;
+        transform-origin: bottom;
+
+
+      }
+
+      #minhand{
+        height: 40%;
+        width: 2.5px;
+        position: absolute;
+        background: rgb(0, 0, 0);
+        left: 50%;
+        bottom: 50%;
+        border-radius: 36%;
+        transform-origin: bottom;
+
+
+
+
+      }
+
+      #hhand{
+        height: 35%;
+        width: 3.3px;
+        position: absolute;
+        background: black;
+        left: 49.5%;
+        bottom: 50%;
+        border-radius: 38%;
+        transform-origin: bottom;
+
+
+
+      }
+
+      .p{
+        font-size: 33px;
+        font-family:'Times New Roman', Times, serif ;
+        position: absolute;
+        width: 280px; 
+        border-radius: 4px;
+        left: 40%;
+        box-shadow: 4px 4px 7px black;
+        }
+
+
+
+        .clock1{
+          transition: 0.6s transform ease-in-out;
+        }
+
+        .clock1:hover
+        {
+          transform: scale(1.08);
+        }
+
+
+
+    </style>
+
+    <script>  
+     setInterval(()=> 
+     {
+      d=new Date();
+      hours=d.getHours();
+      minutes=d.getMinutes();
+      seconds=d.getSeconds();
+
+      hrotation=30*hours+minutes/2;
+      mrotation=6*minutes;
+      srotation=6*seconds;
+
+      hhand.style.transform=`rotate(${hrotation}deg)`;
+      minhand.style.transform=`rotate(${mrotation}deg)`;
+      sechand.style.transform=`rotate(${srotation}deg)`;
+
+         },1000);
+   
+    </script>
+
+   
+
+
+</head>
+<body>
+
+   
+<div class="clock1">
+
+ <div class="clock">
+
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="sbar1"></div>
+    <div class="sbar2"></div>
+    <div class="sbar3"></div>
+    <div class="sbar4"></div>
+
+    <div class="innercircle"></div>
+
+    <div class="dot"></div>
+
+    <div id="sechand"></div>
+    <div id="minhand"></div>
+    <div id="hhand"></div>
+
+   
+  </div>
+
+    
+
+  <h1 class="p">ANALOG CLOCK</h1>
+
+
+   </div>
+
+ </body>
+</html>
